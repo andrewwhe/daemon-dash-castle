@@ -1,0 +1,10 @@
+.row {
+  width: 100%;
+  text-align: center;
+}
+
+.big-button {
+  height: 90%;
+  width: 90%;
+  background-color: CF000F;
+}
