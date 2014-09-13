@@ -2,34 +2,21 @@
   text-align: center;
 }
 
-.big-button {
-	padding-top: 50px;
-  height: 400px;
-  width: 90%;
-  background-color: ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px 0px #333333;
-}
-
-.big-button:hover {
-	transition: all 0.3s ease;
-	background-color: #b2b2b2;
-}
-
 .column {
 	background-color: #ffffff;
 }
 
 .side-float-box {
-	height: 200px;
-	width: 400px;
+	height: 280px;
+	width: 410px;
 	position: fixed;
 	right: 50px;
-	top: 70px;
+	top: 170px;
 	background-color: #ffffff;
 	border-width: 1px;
 	border-color: #333333;
 	border-style: solid;
+	padding: 15px;
 }
 
 .img-holder {
@@ -51,4 +38,19 @@ table {
 
 .wrapper {
 	padding-top: 40px;
+}
+
+.submit-button {
+	background-color: 0DFF6A;
+
+	position: fixed;
+	right: 50px;
+	top: 85px;
+	height: 45px;
+	width: 410px;
+	text-align: center;
+}
+
+.submit-button h3 {
+	color: #ffffff;
 }
