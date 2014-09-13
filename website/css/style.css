@@ -17,6 +17,7 @@
 	border-color: #333333;
 	border-style: solid;
 	padding: 15px;
+	z-index: 2;
 }
 
 .img-holder {
@@ -38,10 +39,11 @@ table {
 
 .wrapper {
 	padding-top: 40px;
+	z-index: -4;
 }
 
-.submit-button {
-	background-color: 0DFF6A;
+#submit-button {
+	background-color: 0AD157;
 
 	position: fixed;
 	right: 50px;
@@ -49,8 +51,9 @@ table {
 	height: 45px;
 	width: 410px;
 	text-align: center;
+	z-index: 2;
 }
 
-.submit-button h3 {
+#submit-button h3 {
 	color: #ffffff;
 }
