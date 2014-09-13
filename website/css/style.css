@@ -1,6 +1,4 @@
 .row {
-	padding-top: 100px;
-  width: 100%;
   text-align: center;
 }
 
@@ -16,4 +14,41 @@
 .big-button:hover {
 	transition: all 0.3s ease;
 	background-color: #b2b2b2;
+}
+
+.column {
+	background-color: #ffffff;
+}
+
+.side-float-box {
+	height: 200px;
+	width: 400px;
+	position: fixed;
+	right: 50px;
+	top: 70px;
+	background-color: #ffffff;
+	border-width: 1px;
+	border-color: #333333;
+	border-style: solid;
+}
+
+.img-holder {
+	background: #ffffff;
+	height: 50px;
+	width: 50px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px #333333;
+}
+
+
+body tr:nth-child(even) td, tbody tr.even td {
+	background: #ffffff !important;
+}
+
+table {
+	border: none !important;
+}
+
+.wrapper {
+	padding-top: 40px;
 }
