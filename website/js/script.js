@@ -4,24 +4,40 @@ function submitButton() {
 	$("#submit-modal").modal();
 }
 
-function getAddress() {
+function compare(origin, origin2, max) {
 
-	var query = "https://maps.googleapis.com/maps/api/geocode/json?address=";
-	query+=($("#origin-address").val()).replace(/ /g, "+");
-	query+="&key="+API_KEY;
-	console.log(query);
+	var coord1 = [];
+	var query1 = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+	query1+=(origin).replace(/ /g, "+");
+	query1+="&key="+API_KEY;
+
+	var coord2 = [];
+	var query2 = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+	query2+=(origin2).replace(/ /g, "+");
+	query2+="&key="+API_KEY;
 
 	$.ajax({
-		url: query,
+		url: query1,
 		type: 'get',
 		success: function(data) {
-			console.log(JSON.stringify(data["results"]["address_components"]));
-			console.log(getMilesFromCoordinates(data["results"]["geometry"]["location"]["lat"], data["results"]["geometry"]["location"]["lon"], 37.42291810, -122.08542120));
+			coord1.push(data["results"][0]["geometry"]['location']["lat"]);
+			coord1.push(data["results"][0]["geometry"]['location']["lng"]);
+			$.ajax({
+				url: query2,
+				type: 'get',
+				success: function(data) {
+					coord2.push(data["results"][0]["geometry"]['location']["lat"]);
+					coord2.push(data["results"][0]["geometry"]['location']["lng"]);
+					return max<=getMilesFromCoordinates(coord1[0], coord1[1], coord2[0], coord2[1]);
+				}
+			});
 		}
 	});
+	
 }
 
 function getMilesFromCoordinates(lat1, lon1, lat2, lon2) {
+	console.log(lat1 + " " + lon1 + " " + lat2  + " " + lon2)
 	var radlat1 = Math.PI * lat1/180;
 
   var radlat2 = Math.PI * lat2/180;
