@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/jquery.modal.css">
     <script src="../js/vendor/jquery.js"></script>
     <script src="../js/vendor/jquery.modal.min.js"></script>
+    <script src="../js/vendor/pace.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/foundation.min.js"></script>
   </head>
@@ -33,7 +34,6 @@
       <div class="row">
         <div class="small-12 column">
           <h1>Submit a ride</h1>
-          <h4 style="color: red">Please search to see if a similar ride exists before you submit!</h4>
         </div>
       </div>      
 
@@ -60,15 +60,11 @@
           <input type="number" placeholder="Seats" id="submit-seats-field">
         </div>
         <div class="small-8 column">
-         <input type="text" placeholder="Phone number" id="submit-phone-field"> 
+         <input type="tel" placeholder="Phone number" id="submit-phone-field"> 
         </div>
       </div>
       <div class="row">
-        <div class="small-4 column">
-          <input type="checkbox" value="car" id="submit-hascar-field">
-          <label for="has_car">Have a car?</label>
-        </div> 
-        <div class="small-8 column">
+        <div class="small-12 column">
           <input type="email" placeholder="Email" id="submit-email-field">
         </div>
       </div>
@@ -101,6 +97,14 @@
         </div>
         <div class="row">
           <div class="small-6 column">
+            From
+          </div>
+          <div class="small-6 column">
+            To
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-6 column">
             <input type="date" id="min-date">
           </div>
           <div class="small-6 column">
@@ -116,9 +120,9 @@
           </div>
         </div>
         <div class="row">
-        <div class="small-12 column">
-        <a href="#" class="button expand" onclick="compare($('#origin-address').val(), '41-42 Amphitheatre Pkwy, Mountain View, CA 94043', $('#origin-distance').val())">Search</a>
-        </div>
+          <div class="small-12 column">
+          <a href="#" class="button expand" id="search-rides">Search</a>
+          </div>
         </div>
       </form>
     </div>
