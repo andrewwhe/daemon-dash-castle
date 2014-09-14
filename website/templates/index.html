@@ -29,6 +29,23 @@
       </div>
     </a>
 
+    <form id="hitch-modal" class="modal">
+      <div class="row">
+        <div class="small-12 column">
+          <h1>Hitch this ride?</h1>
+        </div>
+      </div>
+      <div class="row">
+        <a><div class="small-6 column" style="background-color: f3f3f3">
+        <h2 style="color:green">Yes</h2>
+        </div></a>
+        <a><div class="small-6 column" style="background-color: f3f3f3">
+        <h2 style="color:red">No</h2>
+        </div></a>
+      </div>
+
+    </form>
+
     <form id="submit-modal" class="modal">
       
       <div class="row">
@@ -91,6 +108,7 @@
           </div>
         </div>
         <div class="row">
+
           <div class="small-12 column">
             <input type="text" placeholder="Destination" id="destination-address">
           </div>
@@ -140,7 +158,7 @@
             <tbody>
               <tr>
                 <td rowspan="2" style="width: 65px">
-                  <a href="#"><div class="img-holder"><span style="font-weight: bold; color: green;">HITCH!</span></div></a>
+                  <a href="#" onclick="$('#hitch-modal').modal()"><div class="img-holder"><span style="font-weight: bold; color: green;">HITCH!</span></div></a>
                 </td>
                 <td style="width:120px">
                   <span style="font-size: 16px">Sep 14 2014</span>
@@ -161,63 +179,6 @@
           </table>
         </div>
       
-      
-      
-        <div class="small-12 column">
-          <table>
-            <tbody>
-              <tr>
-                <td rowspan="2" style="width: 65px">
-                  <div class="img-holder"><span style="font-weight: bold; color: red;">FULL</span></div>
-                </td>
-                <td style="width:120px">
-                  <span style="font-size: 16px">Sep 14 2014</span>
-                </td>
-                <td>
-                  <span style="color:red">
-                    4/4 spots taken
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td style="width:80px">
-                  <span style="">9:14 PM</span>
-                </td>
-                <td><span style="">8809 38th Avenue Baltimore MD, 20874</span> <span style="color:#999999">-></span> <span style="">Alex's butthole</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      
-
-      
-        <div class="small-12 column">
-          <table>
-            <tbody>
-              <tr>
-                <td rowspan="2" style="width: 65px">
-                  <a href="#"><div class="img-holder"><span style="font-weight: bold; color: green;">HITCH!</span></div></a>
-                </td>
-                <td style="width:120px">
-                  <span style="font-size: 16px">Sep 15 2014</span>
-                </td>
-                <td>
-                  <span style="color:green">
-                    1/6 spots taken
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td style="width:80px">
-                  <span style="">7:00 AM</span>
-                </td>
-                <td><span style="">8809 38th Avenue Baltimore MD, 20874</span> <span style="color:#999999">-></span> <span style="">Alex's butthole</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      
-
     </div>
   </body>
 </html>
