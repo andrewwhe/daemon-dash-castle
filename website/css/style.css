@@ -51,8 +51,7 @@ table {
 	border: none !important;
 }
 
-.wrapper {
-  background: #f3f3f3;
+.wrapper {;
 	padding-top: 40px;
 	z-index: -4;
   width: 100% - 470px;
