@@ -6,8 +6,6 @@ function submitButton() {
 
 function compare(origin, origin2, max) {
 
-	var val;
-
 	var coord1 = [];
 	var query1 = "https://maps.googleapis.com/maps/api/geocode/json?address=";
 	query1+=(origin).replace(/ /g, "+");
@@ -34,20 +32,10 @@ function compare(origin, origin2, max) {
 						return "error";
 					coord2.push(data["results"][0]["geometry"]['location']["lat"]);
 					coord2.push(data["results"][0]["geometry"]['location']["lng"]);
-
 					if( max<=getMilesFromCoordinates(coord1[0], coord1[1], coord2[0], coord2[1]) )
-						val = "true";
+						return "true";
 					else
-						val = "false";
-					$.ajax({
-						url: "../php/search.php",
-						type: "POST",
-						data: val,
-						success: function(data) {
-							//success!
-						}
-					});
-					
+						return "false";
 				}
 			});
 		}

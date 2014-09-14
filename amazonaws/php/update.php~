@@ -1,0 +1,12 @@
+<?php
+
+$con=mysqli_connect("localhost", "root", "sigmaphidelta", "DaemonDashDashDash");
+
+
+$getHash = $_GET["hash"];
+$result = mysqli_query($con, "UPDATE Rides SET Seats_Taken=Seats_Taken+1 WHERE Hash='$getHash';");
+
+
+?>
+
+

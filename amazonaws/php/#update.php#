@@ -1,0 +1,34 @@
+<?php
+
+$con=mysqli_connect("localhost", "root", "sigmaphidelta", "DaemonDashDashDash");
+
+
+$getHash = $_GET["hash"];
+$result = mysqli_query($con, "UPDATE Rides SET Seats_Taken=Seats_Taken+1 WHERE Hash='$getHash';");
+
+$driver_email = mysqli_query($con, "SELECT email FROM Rides WHERE Hash ='getHash';);
+$driver_phone = mysqli_query($con, "SELECT email FROM Rides WHERE Hash ='getHash';);
+$driver_name = mysqli_query($con, "SELECT email FROM Rides WHERE Hash ='getHash';);
+
+$ride_date = mysqli_query($con, "SELECT Departure_Date FROM Rides WHERE Hash ='getHash';);
+$ride_time = mysqli_query($con, "SELECT Departure_Time FROM Rides WHERE Hash ='getHash';);
+
+$hitcher_email = mysqli_real_escape_string($con, $_POST['email-hitcher-field']);
+$hitcher_phone = mysqli_real_escape_string($con, $_POST['phone-hitcher-field']);
+$hitcher_name = mysqli_real_escape_string($con, $_POST['name-hitcher-field']);
+
+$hitcher_message = "Hello $hitcher_name,\nYou have been confirmed to be hitched up with $driver_name on $ride_date at $ride_time.\nYour driver's email address is %driver_email and phone number $driver_phone.\nPlease contact your driver and coordinate pickup and ride details!\nThanks for using COMPNAME!"
+
+$driver_message = "Hello $driver_name,\nYou have been successfully hitched up with $hitcher\
+r_name on $ride_date at $ride_time.\nYour hitcher's email address is %hitcher_email and phone number $hitcher_phone.\nPlease contact your hitcher and coordinate picking them up and ride details!/nThanks for using COMPNAME!"
+ 
+mail($hitcher_email, "Hitcher Confirmation", $hitcher_message);
+
+mail($driver_email, "You've Been HitchedHello $hitcher_name,\nYou have been confirmed to be hitched up with $drive\
+r_name on $ride_date at $ride time.\nYour driver's email address is %driver_email and phone number $driver_phone.\nPlease contact your driver and coordinate pickup and ride details! Thanks for using COMPNAME!"
+!", $driver_message);
+
+
+?>
+
+
