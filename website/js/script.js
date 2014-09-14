@@ -32,7 +32,10 @@ function compare(origin, origin2, max) {
 						return "error";
 					coord2.push(data["results"][0]["geometry"]['location']["lat"]);
 					coord2.push(data["results"][0]["geometry"]['location']["lng"]);
-					return max<=getMilesFromCoordinates(coord1[0], coord1[1], coord2[0], coord2[1]);
+					if( max<=getMilesFromCoordinates(coord1[0], coord1[1], coord2[0], coord2[1]) )
+						return "true";
+					else
+						return "false";
 				}
 			});
 		}
