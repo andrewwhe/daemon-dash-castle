@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Hitch!</title>
@@ -78,13 +79,47 @@
 
     <div class="wrapper">
     <div class="side-float-box">
-      <h3>Search for a ride</h3>
+      
       <form>
-        <input type="text" placeholder="Origin">
-        <input type="text" placeholder="Destination">
-        <input type="text" placeholder="Date">
-        <input type="text" placeholder="Time">
-        <a href="#" class="button expand">Search</a>
+        <div class="row">
+          <div class="small-12 column">
+            <h3>Search for a ride</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-8 column">
+            <input type="text" placeholder="Origin" id="origin-address">
+          </div>
+          <div class="small-4 column">
+            <input type="text" placeholder="Within (mi)" id="origin-distance">
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 column">
+            <input type="text" placeholder="Destination" id="destination-address">
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-6 column">
+            <input type="date" id="min-date">
+          </div>
+          <div class="small-6 column">
+            <input type="date" id="max-date">
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-6 column">
+            <input type="time" id="min-time">
+          </div>
+          <div class="small-6 column">
+            <input type="time" id="max-time">
+          </div>
+        </div>
+        <div class="row">
+        <div class="small-12 column">
+        <a href="#" class="button expand" onclick="getAddress()">Search</a>
+        </div>
+        </div>
       </form>
     </div>
 

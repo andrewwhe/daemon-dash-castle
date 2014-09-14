@@ -8,7 +8,7 @@
 
 .side-float-box {
 	height: 350px;
-	width: 410px;
+	width: 470px;
 	position: fixed;
 	right: 50px;
 	top: 170px;
@@ -55,16 +55,16 @@ table {
   background: #f3f3f3;
 	padding-top: 40px;
 	z-index: -4;
-  width: 100% - 410px;
+  width: 100% - 470px;
 }
 
 #submit-button {
-	background-color: 0AD157;
+	background-color: #0AD157;
 	position: fixed;
 	right: 50px;
 	top: 85px;
 	height: 45px;
-	width: 410px;
+	width: 470px;
 	text-align: center;
 	z-index: 1;
 }
@@ -78,7 +78,7 @@ table {
 }
 
 .button {
-  background-color: 0AD157 !important; 
+  background-color: #0AD157 !important; 
 }
 
 .button:hover {
