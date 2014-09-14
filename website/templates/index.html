@@ -15,7 +15,7 @@
       <nav class="top-bar" id="dash-bar" data-topbar="">
         <ul class="title-area">
           <li class="name">
-            <h1 style="color: #ffffff; margin-left: 10px">Hitch!</h1>
+            <h1 style="color: #0AD157; margin-left: 10px">Hitch!</h1>
           </li>
         </ul>
       </nav>
@@ -72,10 +72,11 @@
         </div>
       </div>
       <div class="row">
-        <a href="#" class="button expand">Submit</a>
+        <a href="#" class="button expand" id="search-submit-button">Submit</a>
       </div>
     </form>
 
+    <div class="wrapper">
     <div class="side-float-box">
       <h3>Search for a ride</h3>
       <form>
@@ -83,10 +84,12 @@
         <input type="text" placeholder="Destination">
         <input type="text" placeholder="Date">
         <input type="text" placeholder="Time">
+        <a href="#" class="button expand">Search</a>
       </form>
     </div>
 
-    <div class="wrapper">
+
+
         <div class="small-12 column" style="text-align: left">
           <h1>Upcoming Rides</h1>
         </div>
@@ -98,12 +101,15 @@
             <tbody>
               <tr>
                 <td rowspan="2" style="width: 65px">
-                  <div class="img-holder"></div>
+                  <a href="#"><div class="img-holder"><span style="font-weight: bold; color: green;">HITCH!</span></div></a>
                 </td>
                 <td style="width:120px">
                   <span style="font-size: 16px">Sep 14 2014</span>
                 </td>
                 <td>
+                  <span style="color: #25D6FF">
+                    This ride has a driver!
+                  </span> | 
                   <span style="color:green">
                     3/5 spots taken
                   </span>
@@ -126,12 +132,15 @@
             <tbody>
               <tr>
                 <td rowspan="2" style="width: 65px">
-                  <div class="img-holder"></div>
+                  <div class="img-holder"><span style="font-weight: bold; color: red;">FULL</span></div>
                 </td>
                 <td style="width:120px">
                   <span style="font-size: 16px">Sep 14 2014</span>
                 </td>
                 <td>
+                  <span style="color: #25D6FF">
+                    This ride has a driver!
+                  </span> | 
                   <span style="color:red">
                     4/4 spots taken
                   </span>
@@ -154,12 +163,13 @@
             <tbody>
               <tr>
                 <td rowspan="2" style="width: 65px">
-                  <div class="img-holder"></div>
+                  <a href="#"><div class="img-holder"><span style="font-weight: bold; color: green;">HITCH!</span></div></a>
                 </td>
                 <td style="width:120px">
                   <span style="font-size: 16px">Sep 15 2014</span>
                 </td>
                 <td>
+                  <span style="color: orange">This ride needs a driver!</span> | 
                   <span style="color:green">
                     1/6 spots taken
                   </span>

@@ -7,7 +7,7 @@
 }
 
 .side-float-box {
-	height: 280px;
+	height: 350px;
 	width: 410px;
 	position: fixed;
 	right: 50px;
@@ -26,8 +26,22 @@
 	width: 50px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 5px 0px #333333;
+	text-align: center;
+	padding-top: 16px;
 }
 
+.img-holder span {
+	display: block;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+a .img-holder:hover {
+	animation-duration: 0.2s;
+	background-color: #f3f3f3 !important;
+}
 
 body tr:nth-child(even) td, tbody tr.even td {
 	background: #ffffff !important;
@@ -38,13 +52,14 @@ table {
 }
 
 .wrapper {
+  background: #f3f3f3;
 	padding-top: 40px;
 	z-index: -4;
+  width: 100% - 410px;
 }
 
 #submit-button {
 	background-color: 0AD157;
-
 	position: fixed;
 	right: 50px;
 	top: 85px;
@@ -60,4 +75,17 @@ table {
 
 #submit-modal {
   width: 800px;
+}
+
+.button {
+  background-color: 0AD157 !important; 
+}
+
+.button:hover {
+  background-color: #008A1F !important;
+  animation-duration: 0.02s;
+}
+
+.has-tip {
+  bottom-border: none !important;
 }
