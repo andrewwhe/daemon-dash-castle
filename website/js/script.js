@@ -20,12 +20,16 @@ function compare(origin, origin2, max) {
 		url: query1,
 		type: 'get',
 		success: function(data) {
+			if(data["status"] != "OK")
+				return "error";
 			coord1.push(data["results"][0]["geometry"]['location']["lat"]);
 			coord1.push(data["results"][0]["geometry"]['location']["lng"]);
 			$.ajax({
 				url: query2,
 				type: 'get',
 				success: function(data) {
+					if(data["status"] != "OK")
+						return "error";
 					coord2.push(data["results"][0]["geometry"]['location']["lat"]);
 					coord2.push(data["results"][0]["geometry"]['location']["lng"]);
 					return max<=getMilesFromCoordinates(coord1[0], coord1[1], coord2[0], coord2[1]);
